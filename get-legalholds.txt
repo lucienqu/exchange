@@ -1,0 +1,1 @@
+Get-MailboxDatabase | where{$_.Name -notlike "*Students*"} | Get-Mailbox | Select Name,LitigationHoldEnabled | where{$_.LitigationHoldEnabled -eq"True"}
